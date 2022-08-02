@@ -10,6 +10,7 @@
         border: 2px solid black;
         padding: 8px;
         position: fixed;
+        width: 70vw;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -29,12 +30,35 @@
       <div class="formContent">
         <form autocomplete="off" id="formDataDiri">
           <div class="form-element" id="fieldName">
-            <label for="inputNama">Nama Panggilan: </label><br />
+            <label for="inputNama">Nama Panggilan: </label>
             <input type="text" id="inputNama" name="nama" placeholder="nama panggilan anda ?" maxLenght="15" />
-            <label id="notifikasiSisaKarakter">Sisa Karakter :</label>
+            <label id="sisaKarakter">Sisa Karakter :</label>
+          </div>
+          <div class="form-element" id="fieldCopy">
+            <label for="inputCopy"><i>Copy</i> tulisan ini:</label>
+            <input type="text" id="inputCopy" name="copy" value="Hello World" disabled /><br />
+          </div>
+          <div class="form-element" id="fieldPaste">
+            <label for="inputPaste"><i>Paste</i> tulisan disini:</label>
+            <input type="text" id="inputPadte" name="paste" placeholder="Paste sesuatu disini" /><br />
+          </div>
+          <div class="form-element" id="fieldCaptcha">
+            <label for="inputCaptcha">Tulis <i>captcha </i>berikut : </label><br />
+            <img src="https://i.ibb.co/yy59QPB/Captcha.png" alt="captcha" /><br />
+            <input type="text" id="inputCaptcha" name="captcha" placeholder="Tulis captcha disini" /><br />
+            <p>Tekan enter pada keyboard jika sudah selesai menulis <i>captcha</i></p>
+          </div>
+          <div class="form-element" align="center">
+            <input type="submit" id="submitButton" value="submit data" disabled />
           </div>
         </form>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputMaxLengthOnLoad = document.getElementById("inputNama").maxlegth;
+        document.getElementById("sisaKarakter").innerText = inputMaxLengthOnLoad;
+      });
+    </script>
   </body>
 </html>
