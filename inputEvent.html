@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Event</title>
+    <style>
+      .contents {
+        border: 2px solid black;
+        padding: 8px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .form-element {
+        margin: 8px;
+        text-align: left;
+      }
+      #notifikasiSisaKarakter {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contents">
+      <h2 align="center">Input Event Form</h2>
+      <div class="formContent">
+        <form autocomplete="off" id="formDataDiri">
+          <div class="form-element" id="fieldName">
+            <label for="inputNama">Nama Panggilan: </label><br />
+            <input type="text" id="inputNama" name="nama" placeholder="nama panggilan anda ?" maxLenght="15" />
+            <label id="notifikasiSisaKarakter">Sisa Karakter :</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
