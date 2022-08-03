@@ -40,7 +40,7 @@
           </div>
           <div class="form-element" id="fieldPaste">
             <label for="inputPaste"><i>Paste</i> tulisan disini:</label>
-            <input type="text" id="inputPadte" name="paste" placeholder="Paste sesuatu disini" /><br />
+            <input type="text" id="inputPaste" name="paste" placeholder="Paste sesuatu disini" /><br />
           </div>
           <div class="form-element" id="fieldCaptcha">
             <label for="inputCaptcha">Tulis <i>captcha </i>berikut : </label><br />
@@ -107,6 +107,12 @@
             document.gerElementById("submitButton").setAttribute("disabled", "");
           }
           e.preventDefault();
+        });
+        document.getElementById("inputCopy").addEventListener("copy", function () {
+          alert("Anda telah men-copy sesuatu....");
+        });
+        document.getElementById("inputPaste").addEventListener("paste", function () {
+          alert("Anda telah mem-paste sebuah teks ...");
         });
       });
     </script>
