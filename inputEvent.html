@@ -88,13 +88,25 @@
         document.getElementById("inputCaptcha").addEventListener("change", function () {
           console.log("INputChaptcha: change");
           const inputCaptcha = document.getElementById("inputCaptcha").value;
-          const submitButtonStatus = document.getELementById("submitButton");
+          const submitButtonStatus = document.getElementById("submitButton");
 
           if (inputCaptcha === "PRNU") {
             submitButtonStatus.removeAttribute("disabled");
           } else {
             submitButtonStatus.setAttribute("disabled", "");
           }
+        });
+
+        document.getElementById("formDataDiri").addEventListener("submit", function (e) {
+          const inputCaptcha = document.getElementById("inputCaptcha").value;
+
+          if (inputCaptcha) {
+            alert("Selamat ! Captcha Anda Lolos :D");
+          } else {
+            alert("Captcha Anda belum tepat:(");
+            document.gerElementById("submitButton").setAttribute("disabled", "");
+          }
+          e.preventDefault();
         });
       });
     </script>
