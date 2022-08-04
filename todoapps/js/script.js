@@ -52,6 +52,15 @@ function makeTodo(todoObject) {
   container.classList.add("item", "shadow");
   container.append(textContainer);
   container.setAttribute("id", `todo-${todoObject.id}`);
+  if (todoObject.isCompleted) {
+    const undoButton = document.createElement("button");
+    undoButton.classList.add("undo-button");
+
+    undoButton.addEventListener("click", function () {
+      undoTaskFromCompleted(todoObject.id);
+    });
+  }
+
   return container;
 }
 
